@@ -30,19 +30,19 @@ QQ群号：169824183
 # 项目结构
 ```
 ├─ace-security
-│  │
+│  │  
 │  ├─ace-admin----------------管理端服务层
-│  │
+│  │  
 │  ├─ace-gate-----------------网关负载中心
-│  │
+│  │ 
 │  ├─ace-ui-------------------前端UI层面
-│  │
+│  │    
 │  ├─ace-center---------------服务注册中心
-│  │
+│  │   
 │  ├─ace-monitor--------------监控中心
-│  │
+│  │     
 │  └─ace-api------------------公共服务接口包
-│
+│  
 ```
 
 ------------
@@ -64,14 +64,27 @@ QQ群号：169824183
 - mysql数据库一个，redis数据库一个
 - jdk1.8
 - IDE插件一个，lombok插件，具体百度即可
+
 ## 运行步骤
 - 运行数据库脚本：依次运行数据库：ace-admin/db/init.sql
 - 修改配置数据库配置：ace-admin/src/main/resources/application.yml、ace-gate/src/main/resources/application.yml
 - 依次运行main类：CenterBootstrap（ace-center）、GateBootstrap（ace-gate）、AdminBootstrap（ace-admin）、UIBootstrap（ace-ui）
 - 访问地址: http://localhost:8765/admin/index  账号/密码：admin/admin
 
+## 运行博客
+- 运行数据脚本：ace-blog-admin/db/init.sql
+- 除了上述需要运行的main类外，依次运行BlogUIBootstrap、BlogAdminBootstrap
+- 前端访问地址：http://localhost:9700/home
+- 后端访问地址：http://localhost:8765/admin/index 账号/密码：blog/blog
+# 开发指南
+[AG-Admin开发手手册_v1.1](https://github.com/wxiaoqi/ace-admin/wiki/AG-Admin%E5%BC%80%E5%8F%91%E6%89%8B%E6%89%8B%E5%86%8C_v1.1)
+
 ---------
 
+### 2017年7月19日 后端内容管理和前端博客demo
+![img](http://ofsc32t59.bkt.clouddn.com/17-07-19/1500425312816.jpg)
+![img](http://ofsc32t59.bkt.clouddn.com/17-07-19/1500425915328.jpg)
+- 完成用户浏览前端和后端管理的demo
 
 ### 2017年7月7日 用户无状态登陆
 -  完成用户基于token方式登陆
